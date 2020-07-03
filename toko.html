@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Alon</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="node_modules/animate/animate.css/animate.min.css">
+
+	<!-- Script -->
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <script>
+    $(document).ready(function () {
+        AOS.init();
+        $('.click').on('click',function(){
+        const popup = document.createElement('div');
+        popup.innerHTML = '<div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mb-4 project"> <div class="card"> <div class="img"> <div class="row"> <div class="col-xs-12 col-sm-10 col-md-5 col-xl-4 mantap"> <img src="assets/image/toko_2.jpeg" alt="toko_3" class="img-responsives mb-3 click"> </div> <div class="col-xs-12 col-sm-12 col-md-12 col-xl-8"> <div class="captionx"> <div class="row"> <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12"> <h2>Razi Laundry</h2> </div> <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mt-2 captionx"> <div class="ratings"> <div class="rating-box"> <div class="rating"> </div> </div> <p class="rating-links"> <a href="javascript:void(0)">0 Review(s)</a> </p> </div> </div> </div> <div class="item"> <table border="0" class="pl-2"   style="color: #c6c6c6"> <tr> <td>Harga</td> <td>:</td> <td class="txt-blue">Rp. 16.000 /kg</td> </tr> <tr> <td>Jam Buka / Tutup</td> <td>:</td> <td class="txt-blue">15:00 - 16:00</td> </tr> </table> <span class="pl-2">Jl. Kayu Manis No.2A, RT.4/RW.3, Balekambang, Kec. Kramat jati, Jakarta Timur, DKI Jakarta 13530</span> </div> </div> </div> </div> </div> </div> </div>'
+            Swal.fire({
+                title: "Detail Toko",
+                html: '<div class="col-xs-12 col-sm-12 col-md-12 col-xl-12"><div class="imgz"> <div class="row"> <div class="col-xs-12 col-sm-10 col-md-5 col-xl-6 mantap-popup"> <img src="assets/image/toko_2.jpeg" alt="toko_3" class="img-responsives mb-3 click"> </div> <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6"> <div class="captionx"> <div class="row"  style="text-align: left"> <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12"> <h2>Razi Laundry</h2> </div> <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mt-2 captionx"> <div class="ratings"> <div class="rating-box"> <div class="rating-popup"> </div> </div> <p class="rating-links"> <a href="javascript:void(0)">0 Review(s)</a> </p> </div> </div> </div> <div class="item-popup "> <table border="0" class="pl-2"   style="color: #c6c6c6"> <tr> <td>Harga</td> <td>:</td> <td class="txt-blue">Rp. 16.000 /kg</td> </tr> <tr> <td>Jam Buka / Tutup</td> <td>:</td> <td class="txt-blue">15:00 - 16:00</td> </tr> </table> <p style="text-align: left;font-size: 16px" class="pl-2">Apartemen 17, Jl. HR. Rasuna Said, RT.16/RW.1, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12960</p> <a href="detailToko.html" class="btn btn-primary pull-left">Go Detail</a> </div> </div> </div> </div> </div> </div>', 
+                customClass: {
+                        popup: 'popup-width title-popup',
+                        // title: ''
+                        header: 'align-left pl-4'
+                    },
+                showCloseButton: true,
+                showConfirmButton: false,
+            })
+        })
+    })
+	</script>
+</head>
+<body>
+<!-- Navigation -->
+<header class="header">
+  <div class="container">
+        <img src="assets/image/logo_1.png" class="logo">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu" v-else>
+			<li><a href="index.html">Beranda</a>
+			<li><a href="about.html">Tentang Kami</a>
+			<li><a href="toko.html" class="activec">Toko</a>
+			<li><a href="faq.html">Faq</a>
+			<li><a href="package.html">Paket</a>
+            <li><a href="contactKami.html">Kontak Kami</a></li>
+			<li><a href="masuk.html">Login</a></li>
+		</ul>		
+  </div>
+</header>
+<!-- End Navigation -->
+
+<!-- SubBanner -->
+<div class="background-image">
+    <div class="overlay-blue-custom">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+                    <div class="captionz">
+                        <h3>Toko</h3>
+                        <ol class="breadcrumb">
+	                        <li><a href="index.html">Home</a></li>
+	                        <li><a href="">Toko</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- EndSubanner -->
+
+    <div id=market>
+        <Navbar/>
+        <ituan header="Markets" title="Markets"/>
+
+        <div class="container mt-50">
+            <div class="row">
+                
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-xl-3" data-aos="fade-right" data-aos-delay="400" data-aos-easing="ease">
+                            <div class="search2">
+
+                                    <ul class="mb-5 category-blog">
+                                        <li style="border-right:3px solid #29abe2;"><h5 style="padding-top:5px;height:35px;" class="me">Search</h5></li>
+                                        <li><input style="padding-left:10px;margin-top:20px;color:#333;width:200px;height:40px;" type="text" placeholder="Cari..."><i style="margin-left:-25px;color:#555;" class="fa fa-search"></i></input></li>
+                                    </ul>
+
+                                <ul class="category-blogs">
+                                    <li style="border-right:3px solid #29abe2;"><h5 class="me">Area</h5></li>
+                                    <li style="padding-top:10px;cursor:pointer;"> <a class="filter btn"><div class="active-button">Semua</div></a></li>
+                                    <li style="padding-top:10px;cursor:pointer;"><a class="filter btn">JAKARTA</a></li>
+                                    <li style="padding-top:10px;cursor:pointer;"><a class="filter btn">BOGOR</a></li>
+                                    <li style="padding-top:10px;cursor:pointer;"><a class="filter btn">DEPOK</a></li>
+                                    <li style="padding-top:10px;cursor:pointer;"></li>
+
+                                </ul>
+
+                                <ul class="category-blog">
+                                    <li style="border-right:3px solid #29abe2;"><h5 class="me">Rating</h5></li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;"> 
+                                        <div class="form-controls">
+                                        <input type="checkbox" id="check1" />
+                                        <label for="check1"><div class="icon-star"><span class="pr-1 fa fa-star"></span></div></label>
+                                        </div>
+                                </li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                        <div class="form-controls">    
+                                        <input type="checkbox" id="check2"/>
+                                            <label for="check2"><div class="icon-star"><span class="pr-1 fa fa-star"></span><span class="pr-1 fa fa-star"></span></div></label>
+                                        </div>
+                                    </li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                        <div class="form-controls">    
+                                        <input type="checkbox" id="check3"/>
+                                            <label for="check3"><div class="icon-star"><span class="pr-1 fa fa-star"></span><span class="pr-1 fa fa-star"></span><span class="pr-1 fa fa-star"></span></div></label>
+                                        </div>
+                                    </li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                        <div class="form-controls">    
+                                        <input type="checkbox" id="check4"/>
+                                            <label for="check4"><div class="icon-star"><span class="pr-1 fa fa-star"></span><span class="pr-1 fa fa-star"></span><span class="pr-1 fa fa-star"></span><span class="pr-1 fa fa-star"></span></div></label>
+                                        </div>
+                                    </li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                        <div class="form-controls">    
+                                        <input type="checkbox" id="check5"/>
+                                            <label for="check5"><div class="icon-star"><span class="pr-1 fa fa-star"></span><span class="pr-1 fa fa-star"></span><span class="pr-1 fa fa-star"></span><span class="pr-1 fa fa-star"></span><span class="pr-1 fa fa-star"></span></div></label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- padding-right: 2px; -->
+                                <ul class="category-blog">
+                                    <li style="border-right:3px solid #29abe2;"><h5 class="me">Harga</h5></li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;"> 
+                                        <div class="form-controls">
+                                        <input type="checkbox" id="check6" />
+                                        <label for="check6">Rp.12.000 - Rp.20.000</label>
+                                        </div>
+                                </li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                        <div class="form-controls">    
+                                        <input type="checkbox" id="check7"/>
+                                            <label for="check7">Rp.11.000 - Rp.14.000</label>
+                                        </div>
+                                    </li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                        <div class="form-controls">    
+                                        <input type="checkbox" id="check8"/>
+                                            <label for="check8">Rp.10.000 - Rp.13.000</label>
+                                        </div>
+                                    </li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                        <div class="form-controls">    
+                                        <input type="checkbox" id="check9"/>
+                                            <label for="check9">Rp.7.000 - Rp.10.000</label>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+
+                                <ul class="category-blog">
+                                    <li style="border-right:3px solid #29abe2;"><h5 class="me">Kategori</h5></li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                        <div class="form-controls">    
+                                        <input type="checkbox" id="check10"/>
+                                            <label for="check10">Laundry & Dry Cleaning </label>
+                                        </div>
+                                    </li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                        <div class="form-controls">    
+                                        <input type="checkbox" id="check11"/>
+                                            <label for="check11">Laundry Saja </label>
+                                        </div>
+                                    </li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                        <div class="form-controls">    
+                                        <input type="checkbox" id="check12"/>
+                                            <label for="check12">Dry Cleaning </label>
+                                        </div>
+                                    </li>
+                                    <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                            <div class="form-controls">    
+                                            <input type="checkbox" id="check10"/>
+                                                <label for="check10">Express</label>
+                                            </div>
+                                        </li>
+                                        <li style="padding-top:10px;cursor:pointer;padding-left: 36px;">
+                                            <div class="form-controls">    
+                                            <input type="checkbox" id="check11"/>
+                                                <label for="check11">Normal </label>
+                                            </div>
+                                        </li>
+                                </ul>
+                                <!-- <hr class="mt-5 mobile-none" style="background-color: #f4f4f4;"/> -->
+                            </div>
+                            <div class="filters">
+                                <a class="filter btn"><div class="active-buttons">Semua</div></a>
+                                <a class="filter btn">JAKARTA</a>
+                                <a class="filter btn">BOGOR</a>
+                                <a class="filter btn">DEPOK</a>
+                            </div>
+                    </div>
+
+                <div class="col-xl-9 col-xs-12 col-sm-12 col-md-12 mb-5 mt-4">
+                    <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mb-4 project" data-aos="fade-up" data-aos-easing="ease">
+
+                                    <div class="card">
+                                        <div class="img">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-10 col-md-5 col-xl-4 mantap">
+                                                    <img src="assets/image/toko_5.jpg" class="img-responsives mb-3 click">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-8">
+                                                    <div class="captionx">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+                                                                <h2>Zahra Laundry</h2>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mt-2 captionx">
+                                                                 <div class="ratings">
+                                                                    <div class="rating-box">
+                                                                        <div class="rating">
+    
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="rating-links">
+                                                                        <a href="javascript:void(0)">0 Review(s)</a>
+                                                                    </p>
+                                                                </div>
+    
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <table border="0" class="pl-2"   style="color: #c6c6c6">
+                                                                <tr>
+                                                                    <td>Harga</td>
+                                                                    <td>:</td>
+                                                                    <td class="txt-blue">Rp. 15.000 /kg</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Jam Buka / Tutup</td>
+                                                                    <td>:</td>
+                                                                    <td class="txt-blue">07:00 - 16:00</td>
+                                                                </tr>
+                                                            </table>
+                                                            <span class="pl-2">no.50, Jl. Raya Tengah, Jl. Raya Condet, RT.11/RW.3, Batu Ampar, Kec. Kramat jati, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13530</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6 mana">
+                                                <table class="striped item" style="width: 100%;">
+                                                    <tbody style="line-height: 48px;">
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Baju</td>
+                                                            <td style="text-align:right;">Rp. 12.000 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Celana</td>
+                                                            <td style="text-align:right;">Rp. 10.000 </td>
+                                                        </tr>
+                                                    </tbody style="line-height: 48px;">
+                                                </table>      
+                                            </div>    
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6 mana">
+                                                <table class="striped item" style="width: 100%;">
+                                                    <tbody style="line-height: 48px;">
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Jaket</td>
+                                                            <td style="text-align:right;">Rp. 20.000 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Hoddie</td>
+                                                            <td style="text-align:right;">Rp. 15.000 </td>
+                                                        </tr>
+                                                    </tbody style="line-height: 48px;">
+                                                </table>      
+                                            </div>      
+                                        </div>   
+                                            <div>
+                                                <a class="text-white btn btn-primary mt-3" href="detailToko.html">Go Detail</a>
+                                            </div>
+                                </div>
+                            </div>
+
+                            <!-- User 2 -->
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mb-4 project" data-aos="fade-up" data-aos-easing="ease">
+
+                                    <div class="card">
+                                        <div class="img">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-10 col-md-5 col-xl-4 mantap">
+                                                    <img src="assets/image/toko_1.jpeg" alt="toko_2" class="img-responsives mb-3 click">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-8">
+                                                    <div class="captionx">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+                                                                <h2>The Laundry Shop</h2>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mt-2 captionx">
+                                                                 <div class="ratings">
+                                                                    <div class="rating-box">
+                                                                        <div class="rating">
+    
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="rating-links">
+                                                                        <a href="javascript:void(0)">0 Review(s)</a>
+                                                                    </p>
+                                                                </div>
+    
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <table border="0" class="pl-2"   style="color: #c6c6c6">
+                                                                <tr>
+                                                                    <td>Harga</td>
+                                                                    <td>:</td>
+                                                                    <td class="txt-blue">Rp. 14.000 /kg</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Jam Buka / Tutup</td>
+                                                                    <td>:</td>
+                                                                    <td class="txt-blue">15:00 - 16:00</td>
+                                                                </tr>
+                                                            </table>
+                                                            <span class="pl-2">Jl. Padang Ⅰ, RT.004/RW.005, Jaka Mulya, Kec. Bekasi Sel., Kota Bekasi, Jawa Barat 17146e</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6 mana">
+                                                <table class="striped item" style="width: 100%;">
+                                                    <tbody style="line-height: 48px;">
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Kaos</td>
+                                                            <td style="text-align:right;">Rp. 8.000 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Baju</td>
+                                                            <td style="text-align:right;">Rp. 14.000 </td>
+                                                        </tr>
+                                                    </tbody style="line-height: 48px;">
+                                                </table>      
+                                            </div>    
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6 mana">
+                                                <table class="striped item" style="width: 100%;">
+                                                    <tbody style="line-height: 48px;">
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Jaket</td>
+                                                            <td style="text-align:right;">Rp. 25.000 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Celana</td>
+                                                            <td style="text-align:right;">Rp. 15.000 </td>
+                                                        </tr>
+                                                    </tbody style="line-height: 48px;">
+                                                </table>      
+                                            </div>      
+                                        </div>   
+                                        <a href="detailToko.html" class="btn btn-primary text-white mt-3">Go Detail</a>
+                                </div>
+                            </div>
+                            <!-- User 3 -->
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mb-4 project" data-aos="fade-up" data-aos-easing="ease">
+
+                                    <div class="card">
+                                        <div class="img">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-10 col-md-5 col-xl-4 mantap">
+                                                    <img src="assets/image/toko_2.jpeg" alt="toko_3" class="img-responsives mb-3 click">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-8">
+                                                    <div class="captionx">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+                                                                <h2>Razi Laundry</h2>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mt-2 captionx">
+                                                                 <div class="ratings">
+                                                                    <div class="rating-box">
+                                                                        <div class="rating">
+    
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="rating-links">
+                                                                        <a href="javascript:void(0)">0 Review(s)</a>
+                                                                    </p>
+                                                                </div>
+    
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <table border="0" class="pl-2"   style="color: #c6c6c6">
+                                                                <tr>
+                                                                    <td>Harga</td>
+                                                                    <td>:</td>
+                                                                    <td class="txt-blue">Rp. 16.000 /kg</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Jam Buka / Tutup</td>
+                                                                    <td>:</td>
+                                                                    <td class="txt-blue">15:00 - 16:00</td>
+                                                                </tr>
+                                                            </table>
+                                                            <span class="pl-2">Jl. Kayu Manis No.2A, RT.4/RW.3, Balekambang, Kec. Kramat jati, Jakarta Timur, DKI Jakarta 13530</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6 mana">
+                                                <table class="striped item" style="width: 100%;">
+                                                    <tbody style="line-height: 48px;">
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Baju</td>
+                                                            <td style="text-align:right;">Rp. 15.000 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Celana</td>
+                                                            <td style="text-align:right;">Rp. 13.000 </td>
+                                                        </tr>
+                                                    </tbody style="line-height: 48px;">
+                                                </table>      
+                                            </div>    
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6 mana">
+                                                <table class="striped item" style="width: 100%;">
+                                                    <tbody style="line-height: 48px;">
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Jaket</td>
+                                                            <td style="text-align:right;">Rp. 23.000 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Kaos</td>
+                                                            <td style="text-align:right;">Rp. 5.000 </td>
+                                                        </tr>
+                                                    </tbody style="line-height: 48px;">
+                                                </table>      
+                                            </div>      
+                                        </div>   
+                                        <a href="detailToko.html" class="btn btn-primary text-white mt-3">Go Detail</a>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mb-4 project" data-aos="fade-up" data-aos-easing="ease">
+
+                                    <div class="card">
+                                        <div class="img">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-10 col-md-5 col-xl-4 mantap">
+                                                    <img src="assets/image/toko_3.jpeg" alt="toko_4" class="img-responsives mb-3 click">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-8">
+                                                    <div class="captionx">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+                                                                <h2>Kilo Laundry</h2>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mt-2 captionx">
+                                                                 <div class="ratings">
+                                                                    <div class="rating-box">
+                                                                        <div class="rating">
+    
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="rating-links">
+                                                                        <a href="javascript:void(0)">0 Review(s)</a>
+                                                                    </p>
+                                                                </div>
+    
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <table border="0" class="pl-2"   style="color: #c6c6c6">
+                                                                <tr>
+                                                                    <td>Harga</td>
+                                                                    <td>:</td>
+                                                                    <td class="txt-blue">Rp. 17.000 /kg</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Jam Buka / Tutup</td>
+                                                                    <td>:</td>
+                                                                    <td class="txt-blue">15:00 - 16:00</td>
+                                                                </tr>
+                                                            </table>
+                                                            <span class="pl-2">Apartemen 17, Jl. HR. Rasuna Said, RT.16/RW.1, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12960</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6 mana">
+                                                <table class="striped item" style="width: 100%;">
+                                                    <tbody style="line-height: 48px;">
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Baju</td>
+                                                            <td style="text-align:right;">Rp. 11.000 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Celana</td>
+                                                            <td style="text-align:right;">Rp. 13.000 </td>
+                                                        </tr>
+                                                    </tbody style="line-height: 48px;">
+                                                </table>      
+                                            </div>    
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6 mana">
+                                                <table class="striped item" style="width: 100%;">
+                                                    <tbody style="line-height: 48px;">
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Jaket</td>
+                                                            <td style="text-align:right;">Rp. 15.000 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Hoddie</td>
+                                                            <td style="text-align:right;">Rp. 15.000 </td>
+                                                        </tr>
+                                                    </tbody style="line-height: 48px;">
+                                                </table>      
+                                            </div>      
+                                        </div>   
+                                        <a href="detailToko.html" class="btn btn-primary text-white mt-3">Go Detail</a>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mb-4 project" data-aos="fade-up" data-aos-easing="ease">
+
+                                    <div class="card">
+                                        <div class="img">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-10 col-md-5 col-xl-4 mantap">
+                                                    <img src="assets/image/toko_4.jpeg" alt="toko_5" class="img-responsives mb-3 click" onclick="PopUp">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-8">
+                                                    <div class="captionx">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+                                                                <h2>vika laundry</h2>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 mt-2 captionx">
+                                                                 <div class="ratings">
+                                                                    <div class="rating-box">
+                                                                        <div class="rating">
+    
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="rating-links">
+                                                                        <a href="javascript:void(0)">0 Review(s)</a>
+                                                                    </p>
+                                                                </div>
+    
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <table border="0" class="pl-2"   style="color: #c6c6c6">
+                                                                <tr>
+                                                                    <td>Harga</td>
+                                                                    <td>:</td>
+                                                                    <td class="txt-blue">Rp. 12.000 /kg</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Jam Buka / Tutup</td>
+                                                                    <td>:</td>
+                                                                    <td class="txt-blue">15:00 - 16:00</td>
+                                                                </tr>
+                                                            </table>
+                                                            <span class="pl-2">Jalan Harvest City ruko durio blok dc 3 no 25, 26, Cipenjo, Kec. Cileungsi, Bogor, Jawa Barat 16820</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6 mana">
+                                                <table class="striped item" style="width: 100%;">
+                                                    <tbody style="line-height: 48px;">
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Baju</td>
+                                                            <td style="text-align:right;">Rp. 11.000 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Jaket</td>
+                                                            <td style="text-align:right;">Rp. 20.000 </td>
+                                                        </tr>
+                                                    </tbody style="line-height: 48px;">
+                                                </table>      
+                                            </div>    
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6 mana">
+                                                <table class="striped item" style="width: 100%;">
+                                                    <tbody style="line-height: 48px;">
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Celana</td>
+                                                            <td style="text-align:right;">Rp. 13.000 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="check"><i class="fa fa-check-circle"/></td>
+                                                            <td>Hoddie</td>
+                                                            <td style="text-align:right;">Rp. 15.000 </td>
+                                                        </tr>
+                                                    </tbody style="line-height: 48px;">
+                                                </table>      
+                                            </div>      
+                                        </div>   
+                                        <a href="detailToko.html" class="btn btn-primary text-white mt-3">Go Detail</a>
+                                </div>
+                            </div>  
+
+                        </div>
+                                <div class="content_detail__pagination cdp" actpage="1">
+                                        <a href="#!-1" class="cdp_i">prev</a>
+                                        <a href="#!1" class="cdp_i">1</a>
+                                        <a href="#!2" class="cdp_i">2</a>
+                                        <a href="#!3" class="cdp_i">3</a>
+                                        <a href="#!4" class="cdp_i">4</a>
+                                        <a href="#!5" class="cdp_i">5</a>
+                                        <a href="#!6" class="cdp_i">6</a>
+                                        <a href="#!7" class="cdp_i">7</a>
+                                        <a href="#!8" class="cdp_i">8</a>
+                                        <a href="#!+1" class="cdp_i">next</a>
+                                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+<!-- Footer -->
+<div id="footer" class="">
+        <div class="container">
+          <div class="bg-blue">
+            <img src="assets/image/gambar_hp.png" alt="" class="phone">
+            <div class="caption">
+              <b>#LAUNDRYONLINE</b>
+              <div class="download">
+                <span>Download AlON sekarang</span>
+                <a href="https://play.google.com/" target="_blank"><img src="assets/image/download_play.png" alt=""></a>
+                <a href="https://apps.apple.com/" target="_blank"><img src="assets/image/download_app.png" alt=""></a>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- <div class="clearfix"></div> -->
+          <div class="foote_2">
+            <!-- <a href="#" class="logo"><img src="../assets/image/logo.png" alt=""></a> -->
+            <div id="link">
+                <a href="index.html">Beranda</a>
+                <a href="toko.html">Produk &amp; Fitur</a>
+                <a href="package.html">Daftar Vendor</a>
+                <a href="index.html#promo">Promo</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="copy">
+              © 2019 ALON - PT. ALON Indonesia. All Rights Reserved.
+            </div>
+      
+            <div class="sosmed">
+              <span>Ikuti Kami</span>
+              <a href="https://twitter.com" target="_blank"><img src="assets/image/ico-tw.png" alt=""></a>
+              <a href="https://www.facebook.com/" target="_blank"><img src="assets/image/ico-fb.png" alt=""></a>
+              <a href="https://www.instagram.com/" target="_blank"><img src="assets/image/ico-ig.png" alt=""></a>
+              <a href="https://www.youtube.com/" target="_blank"><img src="assets/image/ico-yt.png" alt=""></a>
+            </div>
+          </div>
+      
+          </div>
+      </div>
+<!-- Back To Top -->
+<a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button"><i class="fa fa-chevron-up"></i></a>
+<!-- End Back To Top -->
+<!-- End Footer -->
+</body>
+</html>

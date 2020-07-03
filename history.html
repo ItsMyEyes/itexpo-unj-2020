@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Alon</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/test.css">
+    <link rel="stylesheet" href="assets/css/responsive-table.css">
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+
+	<!-- Script -->
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  <script>
+      $(document).ready(function () {
+            $('.tooltips').append("<span></span>");
+			$('.tooltips:not([tooltip-position])').attr('tooltip-position','bottom');
+
+
+			$(".tooltips").mouseenter(function(){
+			$(this).find('span').empty().append($(this).attr('tooltip'));
+			});
+      })
+  </script>
+</head>
+<body>
+<!-- Navigation -->
+<!-- <header class="header">
+  <div class="container">
+		<img src="assets/image/logo_1.png" class="logo">
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+		<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="menu" v-else>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang Kami</a>
+            <li><a href="history.html"  class="activec">Riwayat</a></li>
+            <li><a href="penjual.html">Profil</a></li>
+            <li><a href="index.html">Logout</a></li>
+		</ul>		
+  </div>
+</header> -->
+<header class="header">
+    <div class="container">
+      <img src="assets/image/logo_1.png" class="logo">
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <ul class="menu" v-else>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="toko.html">Toko</a></li>
+        <li><a href="faq.html">Faq</a></li>
+        <li><a href="history.html"  class="activec">Riwayat</a></li>
+        <li><a href="penjual.html">Profil</a></li>
+        <li><a href="masuk.html">Login</a></li>
+      </ul>		
+    </div>
+  </header>
+<!-- End Navigation -->
+
+<!-- SubBanner -->
+<div class="background-image">
+    <div class="overlay-blue-custom">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+                    <div class="captionz">
+                        <h3>Riwayat</h3>
+                        <ol class="breadcrumb">
+	                        <li><a href="/">Home</a></li>
+	                        <li>Penjual</li>
+                            <li v-if="title_sub_1">Riwayat</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- EndSubanner -->
+
+<!-- Content -->
+ <div class="container">
+
+            <div class="row mt-5">
+                <div class="mantaps check-out shadow col-xs-12 col-sm-12 col-md-11 col-xl-11 ml-5 mr-5 mt-4 mb-2">
+                    <h4 class="txt-blue">Riwayat</h4>
+                    <p>Sebagai Penjual anda harus selalu memantau keadaan toko dan banyak transaksi anda untuk menaikan profile</p>
+                      <div class="history-table">
+                        <table class="striped itema">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Nama Pemesan.</th>
+                                    <th>Sejumlah.</th>
+                                    <th>Transaksi</th>
+                                    <th>Action.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Andi Syahruddin</td>
+                                    <td>200 Celana & Baju</td>
+                                    <td><img src="assets/image/brand/partner/pembayaran/alfamart-1.png" height="30"/></td>
+                                    <td><span class="tooltips success" tooltip="Transaksi Berhasil" tooltip-position="top" tooltip-type="success"><i class="fa fa-check-circle"></i></span></td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>Muhammad Ali</td>
+                                    <td>10 Baju & Kaos</td>
+                                    <td><img src="assets/image/brand/partner/pembayaran/bni-1.png" height="30"/></td>
+                                    <td><span class="tooltips danger" tooltip="Transaksi Gagal / Dibatalkan" tooltip-position="top" tooltip-type="danger"><i class="fa fa-times-circle"></i></span></td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>Andi Syahruddin</td>
+                                    <td>Jaket & Celana Jeans</td>
+                                    <td><img src="assets/image/brand/partner/pembayaran/bri-1.png" height="30"/></td>
+                                    <td><span class="tooltips warning pending-item" tooltip="Click! Untuk Terima Laundry" tooltip-position="top" tooltip-type="warning"><i class="fa fa-exclamation-circle"></i></span></td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td>Bambang</td>
+                                    <td>20 Baju</td>
+                                    <td><img src="assets/image/brand/partner/pembayaran/mandiri-1.png" height="30"/></td>
+                                    <td><span class="tooltips success" tooltip="Transaksi Berhasil" tooltip-position="top" tooltip-type="success"><i class="fa fa-check-circle"></i></span></td>
+                                </tr>
+                                <tr>
+                                  <td>2.</td>
+                                  <td>Rizal Fadil</td>
+                                  <td>30 Baju Biasa</td>
+                                  <td><img src="assets/image/brand/partner/pembayaran/bni-1.png" height="30"/></td>
+                                  <td><span class="tooltips danger" tooltip="Transaksi Gagal / Dibatalkan" tooltip-position="top" tooltip-type="danger"><i class="fa fa-times-circle"></i></span></td>
+                              </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                        </div>
+                    </div>
+
+        </div>
+<!-- End -->
+
+<!-- Footer -->
+<div id="footer" class="">
+        <div class="container">
+          <div class="bg-blue">
+            <img src="assets/image/gambar_hp.png" alt="" class="phone">
+            <div class="caption">
+              <b>#LAUNDRYONLINE</b>
+              <div class="download">
+                <span>Download AlON sekarang</span>
+                <a href="https://play.google.com/" target="_blank"><img src="assets/image/download_play.png" alt=""></a>
+                <a href="https://apps.apple.com/" target="_blank"><img src="assets/image/download_app.png" alt=""></a>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- <div class="clearfix"></div> -->
+          <div class="foote_2">
+            <!-- <a href="#" class="logo"><img src="../assets/image/logo.png" alt=""></a> -->
+            <div id="link">
+                <a href="index.html">Beranda</a>
+                <a href="toko.html">Produk &amp; Fitur</a>
+                <a href="package.html">Daftar Vendor</a>
+                <a href="index.html#promo">Promo</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="copy">
+              © 2019 ALON - PT. ALON Indonesia. All Rights Reserved.
+            </div>
+      
+            <div class="sosmed">
+              <span>Ikuti Kami</span>
+              <a href="https://twitter.com" target="_blank"><img src="assets/image/ico-tw.png" alt=""></a>
+              <a href="https://www.facebook.com/" target="_blank"><img src="assets/image/ico-fb.png" alt=""></a>
+              <a href="https://www.instagram.com/" target="_blank"><img src="assets/image/ico-ig.png" alt=""></a>
+              <a href="https://www.youtube.com/" target="_blank"><img src="assets/image/ico-yt.png" alt=""></a>
+            </div>
+          </div>
+      
+          </div>
+      </div>
+<!-- End Footer -->
+
+<!-- Back To Top -->
+<a id="back-to-top" href="#" class="btns btn-primary back-to-top" role="button"><i class="fa fa-chevron-up"></i></a>
+<!-- End Back To Top -->
+</body>
+</html>

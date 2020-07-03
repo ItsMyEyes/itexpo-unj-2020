@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Alon</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+	<!-- Script -->
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</head>
+<body>
+<!-- Navigation -->
+<header class="header">
+  <div class="container">
+		<img src="assets/image/logo_1.png" class="logo">
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+		<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="menu" v-else>
+			<li><a href="index.html">Beranda</a></li>
+			<li><a href="about.html">Tentang Kami</a>
+			<li><a href="toko.html" class="activec">Toko</a></li>
+			<li><a href="faq.html">Faq</a></li>
+			<li><a href="package.html">Paket</a></li>
+			<li><a href="contactKami.html">Kontak Kami</a></li>
+			<li><a href="masuk.html">Login</a></li>
+		</ul>		
+  </div>
+</header>
+<!-- End Navigation -->
+
+<!-- SubBanner -->
+<div class="background-image">
+    <div class="overlay-blue-custom">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+                    <div class="captionz">
+                        <h3>Keranjang</h3>
+                        <ol class="breadcrumb">
+	                        <li><a href="/">Home</a></li>
+	                        <li>Toko Dia</li>
+                            <li v-if="title_sub_1">Keranjang</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- EndSubanner -->
+
+<!-- Start Content -->
+<div class="container mt-5">
+            <div class="row">
+                
+                <div class="shadow">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-xl-7">
+                    <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 border">
+                        <div class="mt-4 ml-2">
+                            <div class="row">
+                                <div class="col-xs-12 mb-2 col-xl-6">
+                                    <h5>Pilih Type Baju / Celana Kamu</h5>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Baju Biasa</option>
+                                        <option value="">Celana Biasa</option>
+                                        <option value="">Baju Kaos</option>
+                                        <option value="">Celana Jeans</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 mb-2 col-xl-6">
+                                    <h5>Pilih Type Yang Lainnya</h5>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Hoddie</option>
+                                        <option value="">Jaket</option>
+                                        <option value="">Bantal</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p style="text-align: center" class="pt-3">
+                                    Di halama Troli ini kamu bisa Memesan jasa laundry dengan ukuran satuan baju bukan per kilo dan di halaman troli ini price hanya estemasi bukan total, total akan diberi tahu oleh kurir alone!!
+                                </p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6">
+                                <table class="striped item" style="width: 100%;border: none !important;line-height: 63px !important;">
+                                    <tbody>
+                                        <tr>
+                                            <td>Kaos Kutang</td>
+                                            <td style="text-align:right;">Rp.15.000</td>
+                                             <td class="text-right"><button class="btn btn-primary text-white add-to-cart text-right" data-name="Kaos_Kutang" data-price="12" style="cursor:pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer"></i></button></td>
+                                        </tr>
+                                        <tr><td>Baju Sweater</td><td style="text-align: right;">Rp.20.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart text-right" data-name="Baju_Sweater" data-price="20.000" style="cursor:pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer"></i></button></tr>
+                                        <tr><td>Baju Muslim</td><td style="text-align: right;">Rp.15.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Baju_Muslim" data-price="15.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Baju Taekwondo</td><td style="text-align: right;">Rp.13.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Baju_Taekwondo" data-price="13.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Baju Renang</td><td style="text-align: right;">Rp.20.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Baju_Renang" data-price="20.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Baju Batik </td><td style="text-align: right;">Rp.15.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Baju_Batik" data-price="15.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Baju Biasa </td><td style="text-align: right;">Rp.8.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Baju_Biasa" data-price="8.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Celana Pendek</td><td style="text-align: right;">Rp.10.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Celana_Pendek" data-price="12.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Celana Panjang</td><td style="text-align: right;">Rp.12.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Celana_Panjang" data-price="12.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Celana Dalam</td><td style="text-align: right;">Rp.5.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Celana_Dalam" data-price="5.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Kemeja / Batik</td><td style="text-align: right;">Rp.12.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Kemeja/Batik" data-price="12.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Jaket Kulit</td><td style="text-align: right;">Rp.50.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Jaket_Kulit" data-price="50.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Jaket SemiKulit</td><td style="text-align: right;">Rp.30.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Jaket_SemiKulit" data-price="20.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Jaket Biasa</td><td style="text-align: right;">Rp.20.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Jaket_Biasa" data-price="20.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Jas Blazer</td><td style="text-align: right;">Rp.20.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Jas_Blazer" data-price="20.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Setelan Jas </td><td style="text-align: right;">Rp.20.000</td><td style="text-align: right"><button class="btn btn-primary text-white add-to-cart" data-name="Setelan_Jas" data-price="20.000" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                             <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6">
+                                <table class="striped item" style="width: 100%;border: none !important;line-height: 63px !important;">
+                                    <tbody>
+                                        <tr>
+                                            <td>Jaket</td>
+                                            <td style="text-align:right;">Rp. 15.000</td>
+                                            <td class="text-right"><button class="btn btn-primary text-white add-to-cart text-right" data-name="Jaket" data-price="12.000" style="cursor:pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer"></i></button></td>
+                                        </tr>
+                                        <tr><td>Jaket Bahan</td><td style="text-align: right;">Rp.12.000</td><td style="text-align: right"><button data-name="Jaket_Bahan" data-price="12.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Rompi Tebal</td><td style="text-align: right;">Rp.13.000</td><td style="text-align: right"><button data-name="Rompi_Tebal" data-price="13.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Rompi Biasa</td><td style="text-align: right;">Rp.15.000</td><td style="text-align: right"><button data-name="Rompi_Biasa" data-price="15.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Setelan Blazer</td><td style="text-align: right;">Rp.18.000</td><td style="text-align: right"><button  data-name="Setelan_Blazer" data-price="18.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Blazer Biasa</td><td style="text-align: right;">Rp.13.000</td><td style="text-align: right"><button data-name="Blazer_Biasa" data-price="13.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Helm Modular ¾</td><td style="text-align: right;">Rp.12.000</td><td style="text-align: right"><button data-name="Helm_Modular_2/4" data-price="12.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Helm Full Face</td><td style="text-align: right;">Rp.18.000</td><td style="text-align: right"><button data-name="Helm_Full_Face" data-price="18.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Bed Cover S</td><td style="text-align: right;">Rp.25.000</td><td style="text-align: right"><button data-name="Bed_Cover_S" data-price="25.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Bed Cover M</td><td style="text-align: right;">Rp.35.000</td><td style="text-align: right"><button data-name="Bed_Cover_M" data-price="35.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Bed Cover L</td><td style="text-align: right;">Rp.40.000</td><td style="text-align: right"><button data-name="Bed_Cover_L" data-price="40.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Boneka Jumbo</td><td style="text-align: right;">Rp.40.000</td><td style="text-align: right"><button data-name="Boneka_Jumbo" data-price="40.000"class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Boneka Sedang</td><td style="text-align: right;">Rp.29.000</td><td style="text-align: right"><button data-name="Boneka_Sedang" data-price="29.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Boneka Kecil</td><td style="text-align: right;">Rp.21.000</td><td style="text-align: right"><button data-name="Boneka_Kecil" data-price="21.000" class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Bantal &amp; Guling</td><td style="text-align: right;">Rp.23.000</td><td style="text-align: right"><button data-name="Bantal_Guling" data-price="23.000"class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                        <tr><td>Selimut</td><td style="text-align: right;">Rp.13.000</td><td style="text-align: right"><button data-name="Selimut" data-price="13.000"class="btn btn-primary text-white add-to-cart" style="cursor: pointer;"><i class="fa fa-shopping-cart" style="cursor: pointer;"></i></button></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                   
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-5">
+                   <div class="shadow">
+                      <div class="title-review" style="padding-bottom: 3px;">
+                                <button class="tablink"><h4>Keranjang</h4></button>
+                            </div>
+                        <table class="stripeds" style="width: 100%;border:1px solid #0081e1;line-height: 51px;text-align: center">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                    <th>Qty</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody class="show-cart">
+
+                            </tbody>
+                        </table>
+                        <div class="title-prew">
+                            <button class="tablinks" style="width: 100%;" v-if="total > 0"><h5 style="text-align: left;">SubTotal :  <span style="text-align:right">Rp.  <span class="total-cart"></span>000</span></h5></button>
+                        </div>
+                   </div>
+
+                        <div class="mt-5" v-if="check">
+                             <button class="btn btn-primary pull-right text-white mt-2 mb-2" style="cursor:pointer;" v-if="total > 0" @click="checkout"><h5 style="text-align: left;"><a class="text-white" href="checkout.html" style="margin-bottom: 0 !important">Checkout</a></h5></button>
+                        </div>
+                </div>
+            
+            </div>
+        </div>  
+
+<!-- End Content -->
+<!-- Footer -->
+<div id="footer" class="">
+    <div class="container">
+      <div class="bg-blue">
+        <img src="assets/image/gambar_hp.png" alt="" class="phone">
+        <div class="caption">
+          <b>#LAUNDRYONLINE</b>
+          <div class="download">
+            <span>Download AlON sekarang</span>
+            <a href="https://play.google.com/" target="_blank"><img src="assets/image/download_play.png" alt=""></a>
+            <a href="https://apps.apple.com/" target="_blank"><img src="assets/image/download_app.png" alt=""></a>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <!-- <div class="clearfix"></div> -->
+      <div class="foote_2">
+        <!-- <a href="#" class="logo"><img src="../assets/image/logo.png" alt=""></a> -->
+        <div id="link">
+            <a href="index.html">Beranda</a>
+            <a href="toko.html">Produk &amp; Fitur</a>
+            <a href="package.html">Daftar Vendor</a>
+            <a href="index.html#promo">Promo</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <div class="copy">
+          © 2019 ALON - PT. ALON Indonesia. All Rights Reserved.
+        </div>
+  
+        <div class="sosmed">
+          <span>Ikuti Kami</span>
+          <a href="https://twitter.com" target="_blank"><img src="assets/image/ico-tw.png" alt=""></a>
+          <a href="https://www.facebook.com/" target="_blank"><img src="assets/image/ico-fb.png" alt=""></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="assets/image/ico-ig.png" alt=""></a>
+          <a href="https://www.youtube.com/" target="_blank"><img src="assets/image/ico-yt.png" alt=""></a>
+        </div>
+      </div>
+  
+      </div>
+  </div>
+
+<!-- Back To Top -->
+<a id="back-to-top" href="#" class="btns btn-primary back-to-top" role="button"><i class="fa fa-chevron-up"></i></a>
+<!-- End Back To Top -->
+
+<script type="text/javascript">
+var shoppingCart = (function() {
+  cart = [];
+  
+  // Constructor
+  function Item(name, price, count) {
+    this.name = name;
+    this.price = price;
+    this.count = count;
+  }
+  
+  // Save cart
+  function saveCart() {
+    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }
+  
+    // Load cart
+  function loadCart() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+  }
+  if (sessionStorage.getItem("shoppingCart") != null) {
+    loadCart();
+  }
+  
+  var obj = {};
+  
+  // Add to cart
+  obj.addItemToCart = function(name, price, count) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart[item].count ++;
+        saveCart();
+        return;
+      }
+    }
+    var item = new Item(name, price, count);
+    cart.push(item);
+    saveCart();
+  }
+  // Set count from item
+  obj.setCountForItem = function(name, count) {
+    for(var i in cart) {
+      if (cart[i].name === name) {
+        cart[i].count = count;
+        break;
+      }
+    }
+  };
+  // Remove item from cart
+  obj.removeItemFromCart = function(name) {
+      for(var item in cart) {
+        if(cart[item].name === name) {
+          cart[item].count --;
+          if(cart[item].count === 0) {
+            cart.splice(item, 1);
+          }
+          break;
+        }
+    }
+    saveCart();
+  }
+
+  // Remove all items from cart
+  obj.removeItemFromCartAll = function(name) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart.splice(item, 1);
+        break;
+      }
+    }
+    saveCart();
+  }
+
+  // Clear cart
+  obj.clearCart = function() {
+    cart = [];
+    saveCart();
+  }
+
+  // Count cart 
+  obj.totalCount = function() {
+    var totalCount = 0;
+    for(var item in cart) {
+      totalCount += cart[item].count;
+    }
+    return totalCount;
+  }
+
+  // Total cart
+  obj.totalCart = function() {
+    var totalCart = 0;
+    for(var item in cart) {
+      totalCart += cart[item].price * cart[item].count;
+    }
+    return Number(totalCart.toFixed(3));
+  }
+
+  // List cart
+  obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+      item = cart[i];
+      itemCopy = {};
+      for(p in item) {
+        itemCopy[p] = item[p];
+
+      }
+      itemCopy.total = Number(item.price * item.count).toFixed(3);
+      cartCopy.push(itemCopy)
+    }
+    return cartCopy;
+  }
+  return obj;
+})();
+
+
+// *****************************************
+// Triggers / Events
+// ***************************************** 
+// Add item
+$('.add-to-cart').click(function(event) {
+  event.preventDefault();
+  var name = $(this).data('name');
+  var price = Number($(this).data('price'));
+  shoppingCart.addItemToCart(name, price, 1);
+  displayCart();
+});
+
+// Clear items
+$('.clear-cart').click(function() {
+  shoppingCart.clearCart();
+  displayCart();
+});
+
+
+function displayCart() {
+  var cartArray = shoppingCart.listCart();
+  var output = "";
+  for(var i in cartArray) {
+    output += "<tr class='cart-item text-white'>"
+           +  "<td><span>"+ cartArray[i].name +"</span></td>"
+           +  "<td><div class='price'>Rp. "+ cartArray[i].price +".000</div></td>"
+           +  "<td><table  style='border: none !important;background-color:#f6f6f6;'><tr class='cart-item'><td><span class='btn btn-primary btn-sm text-white plus-item input-group-addon' style='cursor: pointer' data-name=" + cartArray[i].name + ">+</span></td><td>"+ cartArray[i].count +"</td>"
+           + "<td><span class='text-white btn btn-primary btn-sm minus-item' style='cursor: pointer' data-name=" + cartArray[i].name + ">-</span></td></tr></table></td>"
+           + "<td><div class='total'>"+ cartArray[i].total +"</div></td></tr>" ;
+  }
+  var str = output.replace("_"," ");
+  $('.show-cart').html(str);
+  $('.total-cart').html(shoppingCart.totalCart());
+  $('.total-count').html(shoppingCart.totalCount());
+}
+
+// Delete item button
+
+$('.show-cart').on("click", ".delete-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCartAll(name);
+  displayCart();
+})
+
+
+// -1
+$('.show-cart').on("click", ".minus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCart(name);
+  displayCart();
+})
+// +1
+$('.show-cart').on("click", ".plus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.addItemToCart(name);
+  displayCart();
+})
+
+// Item count input
+$('.show-cart').on("change", ".item-count", function(event) {
+   var name = $(this).data('name');
+   var count = Number($(this).val());
+  shoppingCart.setCountForItem(name, count);
+  displayCart();
+});
+
+displayCart();
+</script>
+</body>
+</html>

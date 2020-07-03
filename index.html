@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Alon</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="assets/test.css">
+	<link rel="stylesheet" href="node_modules/animate/animate.css/animate.min.css">
+	<link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+	<link rel="stylesheet" href="node_modules/Nivo-Slider-jQuery/custom_slider.css">
+	<link rel="stylesheet" href="node_modules/Nivo-Slider-jQuery/nivo-slider.css">
+
+	<!-- Script -->
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+	<script src="node_modules/aos/dist/aos.js"></script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+	<script type="text/javascript" src="node_modules/Nivo-Slider-jQuery/jquery.nivo.slider.js"></script>
+	<script>
+		$(document).ready(function(){
+			// 
+			$('#ensign-nivoslider').nivoSlider({
+				effect: 'random',
+				slices: 15,
+				boxCols: 12,
+				boxRows: 8,
+				animSpeed: 500,
+				pauseTime: 5000,
+				startSlide: 0,
+				directionNav: true,
+				controlNavThumbs: false,
+				pauseOnHover: true,
+				manualAdvance: false,
+			});
+			// 
+			$('.owl-carousel').owlCarousel({
+			    margin:10,
+			    autoWidth:true,
+			    autoplay:true,
+			    loop: true,
+				autoplaySpeed: 500,
+				autoplayTimeout: 1500,
+				autoplayHoverPause: true
+			});
+			$('.slider').owlCarousel({
+			    margin:10,
+			    autoWidth:true,
+			    autoplay:true,
+			    loop: true,
+				autoplaySpeed: 500,
+				autoplayTimeout: 1500,
+				autoplayHoverPause: true
+			});
+			AOS.init();
+		});
+	</script>
+</head>
+<body>
+<!-- Navigation -->
+<header class="header">
+  <div class="container">
+		<img src="assets/image/logo_1.png" class="logo">
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+		<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="menu" v-else>
+			<li><a href="index.html" class="activec">Beranda</a></li>
+			<li><a href="about.html">Tentang Kami</a></li>
+			<li><a href="toko.html">Toko</a></li>
+			<li><a href="faq.html">Faq</a></li>
+			<li><a href="package.html">Paket</a></li>
+			<li><a href="contactKami.html">Kontak Kami</a></li>
+			<li><a href="masuk.html">Login</a></li>
+		</ul>		
+  </div>
+</header>
+<!-- End Navigation -->
+
+<!-- Section Banner Slider -->
+ <!-- Start Slider Area -->
+ <div id="home" class="slider-area mobile-none-320">
+		<div class="bend niceties preview-2">
+		  <div id="ensign-nivoslider" class="slides">
+			<img src="assets/image/banner_1.png" alt="" title="#slider-direction-1" />
+			<img src="assets/image/banner_2.png" alt="" title="#slider-direction-2" />
+			<img src="assets/image/banner_3.png" alt="" title="#slider-direction-3" />
+		  </div>
+		</div>
+		<div id="slider-direction-1" class="slider-direction slider-one" data-aos="fade-up" style="display: none;">
+				<div class="container">
+				  <div class="row">
+					<div class="col-xl-12 col-md-12 col-sm-12 col-xs-12">
+					  <div class="slider-content">
+						<!-- layer 1 -->
+						<div class="layer-1-1 hidden-xs ">
+						  <h2 class="title1 animated fadeInUp" style="animation: 1s;">Solusi Laundry Terbaik </h2>
+						</div>
+						<!-- layer 2 -->
+						<div class="layer-1-2">
+						  <h1 class="title2 animated fadeInDown" style="animation: 2s">Anda Mendapatkan Waktu Lebih dengan Keluarga</h1>
+						</div>
+						<!-- layer 3 -->
+						<div class="layer-1-3 hidden-xs">
+						  <a class="ready-btn page-scroll" href="toko.html" data-aos="fade-left">Pelajari Lebih Lanjut</a>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+
+			  <div id="slider-direction-2" class="slider-direction slider-two" data-aos="fade-up" style="display: none;">
+					<div class="container">
+					  <div class="row">
+						<div class="col-xl-12 col-md-12 col-sm-12 col-xs-12">
+						  <div class="slider-content">
+							<!-- layer 1 -->
+							<div class="layer-1-1 hidden-xs ">
+							  <h2 class="title1 animated fadeInUp" style="animation: 1s;">Informasi Laundry Terbaik </h2>
+							</div>
+							<!-- layer 2 -->
+							<div class="layer-1-2">
+							  <h1 class="title2 animated fadeInDown" style="animation: 2s">Kami Akan Membantu Kamu Dalam Membuka Usaha Laundry</h1>
+							</div>
+							<!-- layer 3 -->
+							<div class="layer-1-3 hidden-xs">
+							  <a class="ready-btn page-scroll" href="package.html" data-aos="fade-left">Pelajari Lebih Lanjut</a>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+
+				  <div id="slider-direction-3" class="slider-direction slider-three" data-aos="fade-up" style="display: none;">
+						<div class="container">
+						  <div class="row">
+							<div class="col-xl-12 col-md-12 col-sm-12 col-xs-12">
+							  <div class="slider-content">
+								<!-- layer 1 -->
+								<div class="layer-1-1 hidden-xs ">
+								  <h2 class="title1 animated fadeInUp" style="animation: 1s;">Laundry Terbaik</h2>
+								</div>
+								<!-- layer 2 -->
+								<div class="layer-1-2">
+								  <h1 class="title2 animated fadeInDown" style="animation: 2s">Kami Bisa Membantu Anda Dalam Laundry, Cepat, Aman, Dan Nyaman</h1>
+								</div>
+								<!-- layer 3 -->
+								<div class="layer-1-3 hidden-xs">
+								  <a class="ready-btn page-scroll" href="toko.html" data-aos="fade-left">Pelajari Lebih Lanjut</a>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+			
+	</div>
+	  <!-- End Slider Area -->
+				<div class="section banner mobile-block-320" >
+						<div class="container">
+							<div class="pos-relative">
+								<div class="caption-1">
+									<div class="title-boxs" data-aos="fade-down" data-aos-delay="400">
+										<h2>Laundry Terbaik</h2>
+									</div>
+									<p data-aos="fade-up" data-aos-delay="400">Kami Akan Membantu Kamu Dalam Membuka Usaha Laundry dengan harga murah dan bonus yang banyak</p>
+									<div>
+										<a href="#" title="" class="btns btn-secondary" @click="daftar" data-aos="fade-right">Pelajari Lebih Lanjut</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="imgbg"  style="background-image:url('assets/image/banner_1.png')">
+							<img src="assets/image/banner_1.png" alt="">
+						</div>
+				</div>
+<!-- End Slide -->
+
+<!-- Cara Kerja -->
+<div class="mb-4 mobile-top">
+        <div class="container">
+				<div class="header-title text-center mt-5 mb-2">
+					<h2>Cara Kerja</h2>
+					<div class="garis"></div>
+					<!-- <p>This template is designed with a unique and simple, so that it can promote and laundry business solution.</p> -->
+				</div>	
+			<div class="row pt-4">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-xl-3" data-aos="fade-right" data-aos-delay="300">
+					<!-- data-aos="fade-right" data-aos-delay="300" -->
+					<img src="assets/image/home-2.jpg" class="image-responsive">
+					<div class="captions">
+						<h5>Siapkan Cucian Kotor</h5>
+						<p>Pesan Layanan Laundry melalui Aplikasi Web Atau Mobile Alon</p>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-12 col-md-6 col-xl-3" data-aos="fade-right" data-aos-delay="400">
+					<!-- data-aos="fade-right" data-aos-delay="400" -->
+					<img src="assets/image/home-3.jpg" class="image-responsive">
+					<div class="captions">
+						<h5>Jemput</h5>
+						<p>Kurir Alon akan menjemput cucian anda sesuai dengan jadwal yang anda pilih</p>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-12 col-md-6 col-xl-3" data-aos="fade-right" data-aos-delay="500">
+					<!-- data-aos="fade-right" data-aos-delay="500" -->
+					<img src="assets/image/home-4.jpg" class="image-responsive">
+					<div class="captions">
+						<h5>Cuci Cepat</h5>
+						<p>Cucian anda akan diproses atau dicuci dengan pelayanan profesional berjaminan</p>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-12 col-md-6 col-xl-3" data-aos="fade-right" data-aos-delay="600">
+					<!-- data-aos="fade-right" data-aos-delay="600" -->
+					<img src="assets/image/home-6.jpg" class="image-responsive">
+					<div class="captions">
+						<h5>Diantar</h5>
+						<p>Cucian bersih anda akan diantar kembali oleh kurir Alon</p>
+					</div>
+				</div>
+
+			</div>	
+		</div>	
+    </div>
+<!-- End Cara Kerja -->
+
+<!-- Counter -->
+<div>
+	<div class="counter mt-5">
+		<div class="overlay-blue">
+			<div class="container z-index">
+				<div class="row">
+
+					<div class="col-xs-12 col-sm-6 col-md-3 col-xl-3 text-white text-center" data-aos="fade-right" data-aos-delay="400">
+						<div class="counter-item">
+							<div class="icon">
+								<i class="fa fa-handshake-o"></i>
+							</div>
+							<div class="counter-title" id="counter">
+								<h3 class="number counter-value" data-count="200">0</h3>
+								<p>Mitra Kami</p>
+							</div>	
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-3 col-xl-3 text-white text-center" data-aos="fade-right" data-aos-delay="500">
+						<div class="counter-item">
+							<div class="icon">
+								<i class="fa fa-users"></i>
+							</div>
+							<div class="counter-title" id="counter">
+								<h3 class="number counter-value" data-count="300">0</h3>
+								<p>Pengguna</p>
+							</div>	
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-3 col-xl-3 text-white text-center" data-aos="fade-right" data-aos-delay="600">
+						<div class="counter-item">
+							<div class="icon">
+								<i class="fa fa-money"></i>
+							</div>
+							<div class="counter-title" id="counter">
+								<h3 class="number counter-value" data-count="400">0</h3>
+								<p>Transaksi Berhasil</p>
+							</div>	
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-3 col-xl-3 text-white text-center" data-aos="fade-right" data-aos-delay="700">
+						<div class="counter-item">
+							<div class="icon">
+								<i class="fa fa-trophy"></i>
+							</div>
+							<div class="counter-title" id="counter">
+								<h3 class="number counter-value" data-count="50">0</h3>
+								<p>Penghargaan</p>
+							</div>	
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Counter -->
+
+<!-- Testimoni -->
+<div id=testimoni>
+    <div class="container">
+        <div class="header-title text-center mt-5 mb-2" data-aos="fade-up">
+			<h2>Testimoni</h2>
+			<p>Apa Kata Mereka Yang Sudah Menikmati Layanan Di Aplikasi Kami.</p>
+		</div>
+        <div class="row pt-4">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6" data-aos="flip-right" data-aos-delay="400">
+                <div class="testi-item">
+					<div class="peoples">
+						<img src="assets/image/user_5.png" alt="" class="img-circle" />
+						<h3>Muhammad Solihin</h3>
+						<p>Mitra</p>
+					</div>
+					<div class="quote-box text-white">
+						<p>"Setiap minggu saya rutin mencuci disini, pelayanannya bagus harga juga terjangkau dan hasilnya juga bagus tidak apek seperti tempat laundry saya sebelumnya, terima kasih"</p>
+						<div class="quote-url">
+							<a href="#" title="">Toko Saya</a>
+						</div>
+					</div>
+				</div>
+            </div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-xl-6" data-aos="flip-right" data-aos-delay="300">
+                <div class="testi-item">
+					<div class="peoples">
+						<img src="assets/image/user_4.png" alt="" class="img-circle" />
+						<h3>Andi Syahrudin</h3>
+						<p>User</p>
+					</div>
+					<div class="quote-boxs text-white">
+						<p>"Terimakasih Banget Atas Adanya Aplikasi Ini Saya Sangat Terbantu , Sangat Mudah Jika Saya Keluar Kota Saya jadi tau tempat laundry terdekat dan termurah dari hotel dari hotel"</p>
+						<!-- <div class="quote-url">
+							<a href="#" title="">Toko Saya</a>
+						</div> -->
+					</div>
+				</div>
+            </div>
+
+			<div class="col-xs-12 col-sm-12 col-md-12 col-xl-6" data-aos="flip-right" data-aos-delay="400">
+                <div class="testi-item">
+					<div class="peoples">
+						<img src="assets/image/user_3.png" alt="" class="img-circle" />
+						<h3>Bambang</h3>
+						<p>User</p>
+					</div>
+					<div class="quote-boxs text-white">
+						<p>"Saya Berlangganan Bulanan pada laundry ini, selama ini belum ada keluhan dan saya cukup senang dengan layanan laundry disini, bisa antar jemput gratis kerumah"</p>
+						<!-- <div class="quote-url">
+							<a href="#" title="">Toko Saya</a>
+						</div> -->
+					</div>
+				</div>
+            </div>
+
+			<div class="col-xs-12 col-sm-12 col-md-12 col-xl-6" data-aos="flip-right" data-aos-delay="700">
+                <div class="testi-item">
+					<div class="peoples">
+						<img src="assets/image/user_1.png" alt="" class="img-circle" />
+						<h3>Rizal Fadil</h3>
+						<p>Mitra</p>
+					</div>
+					<div class="quote-box text-white">
+						<p>"Laundry stroller anakku disini yang udh lama di gudang hasilnya bagus wangi dan bener2 bersih juga dapat voucher cuci bed cover 1 pcs :D"</p>
+						<div class="quote-url">
+							<a href="#" title="">Toko Saya</a>
+						</div>
+					</div>
+				</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End Testimoni -->
+
+<!-- Promo -->
+  <div id="promo">
+        <div class="sponsor mt-5">
+            <div class="overlay-grey">
+                <div class="container">
+                    <div class="row z-index">
+                        <div class="header-title text-center mt-3 mb-3" data-aos="fade-up">
+                            <h2>Promo</h2>
+                            <div class="garis"></div>
+                        </div>
+
+                        <div class="owl-carousel">
+                        	<div class="promo" data-aos="fade-right" data-aos-delay="200" data-merge="1">
+							    <div class="box pt-before">
+							        <div class="imgs" style="background-image: url(); background-size: cover; background-position: center top; background-repeat: no-repeat;">
+							            <img src="assets/image/1.jpg" alt="" style="display: block;">
+							        </div>
+							    </div>
+							    <!-- <div class="label"><span>DANA</span></div> -->
+							    <div class="text">
+							        <a href="toko.html">
+							            <h3>Promo Akhir Tahun! Hanya Belanja Dapet Tablet</h3>
+							        </a>
+							    </div>
+							    <div class="tanggal_upload">Hingga 18 Nov 2019</div>							
+								    <a href="toko.html" class="button_next">Ambil Undian</a>
+							    <div class="clearfix"></div>
+							</div>
+
+							<div class="promo" data-aos="fade-right" data-aos-delay="200" data-merge="1">
+									<div class="box pt-before">
+										<div class="imgs" style="background-image: url(); background-size: cover; background-position: center top; background-repeat: no-repeat;">
+											<img src="assets/image/andi.jpg" alt="" style="display: block;">
+										</div>
+									</div>
+									<!-- <div class="label"><a>DANA</a></div> -->
+									<div class="text">
+										<a href="toko.html">
+											<h3>Promo Akhir Tahun! Hanya Belanja Dapet Tablet</h3>
+										</a>
+									</div>
+									<div class="tanggal_upload">Hingga 18 Nov 2019</div>							
+										<a href="toko.html"class="button_next">Ambil Undian</a>
+									<div class="clearfix"></div>
+								</div>
+
+							<div class="promo" data-aos="fade-right" data-aos-delay="300" data-merge="2">
+							    <div class="box pt-before">
+							        <div class="imgs" style="background-image: url(); background-size: cover; background-position: center top; background-repeat: no-repeat;">
+							            <img src="assets/image/2.jpg" alt="" style="display: block;">
+							        </div>
+							    </div>
+							    <!-- <div class="label"><a>DANA</a></div> -->
+							    <div class="text">
+							        <a href="toko.html">
+							            <h3>Promo Akhir Tahun! Hanya Belanja Dapet Tablet</h3>
+							        </a>
+							    </div>
+							    <div class="tanggal_upload">Hingga 18 Nov 2019</div>							
+								    <a href="toko.html"class="button_next">Ambil Undian</a>
+							    <div class="clearfix"></div>
+							</div>
+
+							<div class="promo" data-aos="fade-right" data-aos-delay="400">
+							    <div class="box pt-before">
+							        <div class="imgs" style="background-image: url(); background-size: cover; background-position: center top; background-repeat: no-repeat;">
+							            <img src="assets/image/3.jpg" alt="" style="display: block;">
+							        </div>
+							    </div>
+							    <!-- <div class="label"><a>DANA</a></div> -->
+							    <div class="text">
+							        <a href="toko.html">
+							            <h3>Promo Akhir Tahun! Hanya Belanja Dapet Tablet</h3>
+							        </a>
+							    </div>
+							    <div class="tanggal_upload">Hingga 18 Nov 2019</div>							
+								    <a href="toko.html"class="button_next">Ambil Undian</a>
+							    <div class="clearfix"></div>
+							</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- End Promo -->
+
+<!-- Media Partner -->
+<div id=partner class="mt-5 mb">
+        <div class="container">
+            <div class="header-title text-center" data-aos="fade-up">
+				<h2>Sponsor</h2>
+				<div class="garis"></div>
+				<!-- <p>This template is designed with a unique and simple, so that it can promote and laundry business solution.</p> -->
+			</div>
+            <div class="row pt-3 mb-5 mt-3">
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/alfamart-1.png"/>
+                    </div>
+                </div>
+                
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/bni-1.png"/>
+                    </div>
+                </div>
+
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/bri-1.png"/>
+                    </div>
+                </div>
+
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/cimbniaga-1.png"/>
+                    </div>
+                </div>
+
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/indomaret-1.png"/>
+                    </div>
+                </div>
+
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/kredivo-1.png"/>
+                    </div>
+                </div>
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/mandiri-1.png"/>
+                    </div>
+                </div>
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/mastercard-1.png"/>
+                    </div>
+                </div>
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/paypal-1.png"/>
+                    </div>
+                </div>
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/logo_ovo.jpg"/>
+                    </div>
+                </div>
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/visa-1.png"/>
+                    </div>
+                </div>
+                <div class="col-xs-5 col-sm-4 col-md-3 col-xl-2 pb-16">
+                    <div class="sponsor-ship">
+                        <img src="assets/image/brand/partner/pembayaran/logo_danan.jpg"/>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<!-- End Sponsor -->
+
+<!-- Footer -->
+<div id="footer" class="">
+		<div class="container">
+		  <div class="bg-blue">
+			<img src="assets/image/gambar_hp.png" alt="" class="phone">
+			<div class="caption">
+			  <b>#LAUNDRYONLINE</b>
+			  <div class="download">
+				<span>Download AlON sekarang</span>
+				<a href="https://play.google.com/" target="_blank"><img src="assets/image/download_play.png" alt=""></a>
+				<a href="https://apps.apple.com/" target="_blank"><img src="assets/image/download_app.png" alt=""></a>
+			  </div>
+			</div>
+			<div class="clearfix"></div>
+		  </div>
+		  <!-- <div class="clearfix"></div> -->
+		  <div class="foote_2">
+			<!-- <a href="#" class="logo"><img src="../assets/image/logo.png" alt=""></a> -->
+			<div id="link">
+				<a href="index.html">Beranda</a>
+				<a href="toko.html">Produk &amp; Fitur</a>
+				<a href="package.html">Daftar Vendor</a>
+				<a href="index.html#promo">Promo</a>
+				<a href="faq.html">FAQ</a>
+			</div>
+			<div class="copy">
+			  © 2019 ALON - PT. ALON Indonesia. All Rights Reserved.
+			</div>
+	  
+			<div class="sosmed">
+			  <span>Ikuti Kami</span>
+			  <a href="https://twitter.com" target="_blank"><img src="assets/image/ico-tw.png" alt=""></a>
+			  <a href="https://www.facebook.com/" target="_blank"><img src="assets/image/ico-fb.png" alt=""></a>
+			  <a href="https://www.instagram.com/" target="_blank"><img src="assets/image/ico-ig.png" alt=""></a>
+			  <a href="https://www.youtube.com/" target="_blank"><img src="assets/image/ico-yt.png" alt=""></a>
+			</div>
+		  </div>
+	  
+		  </div>
+	  </div>
+<!-- End Footer -->
+<!-- Back To Top -->
+<a id="back-to-top" href="#" class="btns btn-primary back-to-top mobile-none-320" role="button"><i class="fa fa-chevron-up"></i></a>
+<!-- End Back To Top -->
+
+</body>
+</html>

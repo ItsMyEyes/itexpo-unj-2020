@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Alon</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+	<link rel="stylesheet" href="assets/test.css">
+	<link rel="stylesheet" href="assets/css/responsive-table.css">
+
+	<!-- Script -->
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+	<script src="node_modules/aos/dist/aos.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.tooltips').append("<span></span>");
+			$('.tooltips:not([tooltip-position])').attr('tooltip-position','bottom');
+
+
+			$(".tooltips").mouseenter(function(){
+			$(this).find('span').empty().append($(this).attr('tooltip'));
+			});
+			AOS.init();
+			$('.tab-content').hide();
+			$('.tab-content:first').show();
+
+			// Click function
+			var tabs = $('.tabs');
+			var selector = $('.tabs').find('a').length;
+			var selector = $(".tabs").find(".selector");
+			var activeItem = tabs.find('.activez');
+			var activeWidth = activeItem.innerWidth();
+
+			$(".selector").css({
+				"left": activeItem.position.left + "px", 
+				"width": activeWidth + "px"
+			});
+
+			$(".tabs").on("click","a",function(e){
+				e.preventDefault();
+				$('.tabs a').removeClass('activez');
+				$(this).addClass('activez');
+				$('.tab-content').hide();
+					var activeWidth = $(this).innerWidth();
+					var itemPos = $(this).position();
+					var activeTab = $(this).find('a').attr('href');
+
+				$(".selector").css({
+					"left":itemPos.left + "px", 
+					"width": activeWidth + "px"
+				});
+				var activeTab = $(this).attr('href');
+				$(activeTab).fadeIn();
+				return false;
+				console.log(activeTab)
+
+			});
+		})
+	</script>
+</head>
+<body>
+<!-- Navigation -->
+<header class="header">
+  <div class="container">
+		<img src="assets/image/logo_1.png" class="logo">
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+		<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="menu" v-else>
+			<li><a href="index.html">Beranda</a>
+			<li><a href="about.html">Tentang Kami</a>
+			<li><a href="toko.html">Toko</a>
+			<li><a href="faq.html">Faq</a>
+			<li><a href="contactKami.html">Kontak Kami</a></li>
+			<li><a href="profil.html" class="activec">Profile</a>
+			<li><a href="masuk.html">Logout</a></li>
+		</ul>		
+  </div>
+</header>
+<!-- End Navigation -->
+<div class="container pt-175">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-xl-4">
+				<div class="fixed-left-side-body mb-5 mt-3" data-aos="fade-right">
+					<div class="profile">
+						<div class="profile-image center-align">
+							<div class="image-border">
+								<img src="assets/image/my_photo.png" alt="Image">
+							</div>
+						</div>
+						<!-- /.profile-image -->
+			
+						<div class="profile-name text-center">
+							<h1 class="user-name">Andi Syahruddin</h1>
+							<p>
+								<span class="photoshop-color">User</span> in Alon
+							</p>
+						</div>
+					</div>
+					<!-- /.profile -->
+				</div>
+			</div>
+	
+			<div class="col-xs-12 col-sm-12 col-md-12 col-xl-8">
+				<!--  -->
+				<div class="wrapper" data-aos="fade-down">
+					<nav class="tabs">
+						<div class="selector"></div>
+						<a href="#tab1" class="activez"><i class="fa fa-ticket"></i>Saldo</a>
+						<a href="#tab2"><i class="fa fa-user"></i>Profile</a>
+						<a href="#tab3"><i class="fa fa-history"></i>Riwayat</a>
+					</nav>
+				</div>
+				<!--  -->
+				<!-- <div id="tabs-content" data-aos="fade-up">
+					<div id="tab1" class="tab-content show-card">
+							<div class="item">
+									<div class="row">
+				
+										<div class="col-xl-6 col-md-6">
+											<div class="item-child-left left-align">
+												<h2 class="hi" data-aos="fade-up" data-aos-delay="300">hello.</h2>
+												<p class="name" data-aos="fade-up" data-aos-delay="400">Selamat Datang Kembai</p>
+												<small class="position mb-30" data-aos="fade-up" data-aos-delay="500">&amp; Kami Sangat Merindukan Anda</small>
+												<a href="" class="btns btn-primary"><i class="fa fa-shopping-cart pr-2"></i> Belanja Sekarang </a>
+											</div>
+										</div>
+				
+										<div class="col-xl-6 col-md-6">
+											<div class="item-child-right right-align">
+												<img src="assets/image/user_1.png" alt="Image">
+												<a href="#" class="chat waves-effect waves-light">
+													<i class="fa fa-commenting-o" aria-hidden="true"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+					</div> -->
+					<div id="tab1" class="tab-content"data-aos="fade-up">
+							<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-4 col-xl-4">
+											<div class="small-box bg-aqua shadow">
+												<div class="inner">
+													<h3>10.000</h3>
+									
+													<p>Saldo</p>
+												</div>
+												<div class="icon">
+													<i class="fa fa-money"></i>
+												</div>
+												<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+											</div>
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-4 col-xl-4">
+											<div class="small-box bg-green shadow">
+												<div class="inner">
+													<h3>10</h3>
+									
+													<p>Pembayaran Berhasil</p>
+												</div>
+												<div class="icon">
+													<i class="fa fa-check"></i>
+												</div>
+												<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+											</div>
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-4 col-xl-4">
+											<div class="small-box bg-yellow shadow">
+												<div class="inner">
+													<h3>10</h3>
+									
+													<p>Laundry Diproses</p>
+												</div>
+												<div class="icon">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+											</div>
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-4 col-xl-4">
+											<div class="small-box bg-red shadow">
+												<div class="inner">
+													<h3>2</h3>
+									
+													<p>Keranjang Anda</p>
+												</div>
+												<div class="icon">
+													<i class="fa fa-shopping-bag"></i>
+												</div>
+												<a href="checkout.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+											</div>
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-4 col-xl-4">
+											<div class="small-box bg-aqua shadow">
+												<div class="inner">
+													<h3>10</h3>
+									
+													<p>Promo & Kupon</p>
+												</div>
+												<div class="icon">
+													<i class="fa fa-ticket"></i>
+												</div>
+												<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+											</div>
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-4 col-xl-4">
+											<div class="small-box bg-pink shadow">
+												<div class="inner">
+													<h3>10</h3>
+									
+													<p>Toko Favorite</p>
+												</div>
+												<div class="icon">
+													<i class="fa fa-heart"></i>
+												</div>
+												<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+											</div>
+									</div>
+							</div>
+						</div>
+					<di id="tabs-content">
+						<div class="tab-content show-card profile" id="tab2">
+							<h2>
+								<!-- <i class="txt-blue fa fa-user-o"></i> -->
+								Profile
+							</h2>
+							<div class="garis-profile"></div>
+							<div class="profile-table">
+								<table>
+									<tbody>
+										<tr>
+											<td class="td-w25">Nama</td>
+											<td class="td-w10">:</td>
+											<td class="td-w65">Andi Syahruddin</td>
+										</tr>
+										<tr>
+											<td class="td-w25">Username</td>
+											<td class="td-w10">:</td>
+											<td class="td-w65">andi</td>
+										</tr>
+										<tr>
+											<td class="td-w25">Alamat</td>
+											<td class="td-w10">:</td>
+											<td class="td-w65">RT.6/RW.7, Pekayon 13704</td>
+										</tr>
+										<tr>
+											<td class="td-w25">Kecamatan</td>
+											<td class="td-w10">:</td>
+											<td class="td-w65">Kec. Ps.Rebo</td>
+										</tr>
+										<tr>
+											<td class="td-w25">Kota</td>
+											<td class="td-w10">:</td>
+											<td class="td-w65">Jakarta Timur</td>
+										</tr>
+										<tr>
+											<td class="td-w25">No.Telepon</td>
+											<td class="td-w10">:</td>
+											<td class="td-w65">+62 81908795479</td>
+										</tr>
+										<tr>
+											<td class="td-w25">Email</td>
+											<td class="td-w10">:</td>
+											<td class="td-w65">andiselalu14@gmail.com</td>
+										</tr>
+								</table>
+							</div>
+							<button class="btn btn-primary mt-2" style="cursor: pointer;">Update</button>
+						</div>
+					</di>
+						<div id="tab3" class="tab-content show-card profile">
+							<!-- <div class="profile"> -->
+									<h2>History</h2>
+									<div class="garis-profile"></div>
+								<div class="history-table">
+									<table  class="striped" style="text-align: center;line-height: 50px;border:none !important;margin-top: 24px">
+										<thead >
+											<tr >
+												<th >No.</th>
+												<th >Nama Toko.</th>
+												<th >Sejumlah.</th>
+												<th >Transaksi</th>
+												<th >Action.</th>
+											</tr>
+										</thead>
+										<tbody >
+											<tr >
+												<td >1.</td>
+												<td >Razi Laundry</td>
+												<td >200 Baju</td>
+												<td ><img  src="assets/image/brand/partner/pembayaran/logo_danan.jpg" height="30"></td>
+												<td><span class="tooltips danger" tooltip="Transaksi Gagal / Dibatalkan" tooltip-position="top" tooltip-type="danger"><i class="fa fa-times-circle"></i></span></td>
+											</tr>
+											<tr >
+												<td >2.</td>
+												<td >The Laundry Shop</td>
+												<td >200 Baju Biasa</td>
+												<td ><img src="assets/image/brand/partner/pembayaran/logo_ovo.jpg" height="30"></td>
+												<td><span class="tooltips success" tooltip="Transaksi Berhasil" tooltip-position="top" tooltip-type="success"><i class="fa fa-check-circle"></i></span></td>
+												<!-- <td ><span class="success tooltips" tooltip="Primary action" tooltip-position="right" tooltip-type="primary" ><i  class="fa fa-check-circle"></i></span></td> -->
+											</tr>
+											<tr >
+												<td >3.</td>
+												<td >The Laundry Shop</td>
+												<td >50 Celana Jeans</td>
+												<td ><img src="assets/image/brand/partner/pembayaran/logo_ovo.jpg" height="30"></td>
+												<td><span class="tooltips success" tooltip="Transaksi Berhasil" tooltip-position="top" tooltip-type="success"><i class="fa fa-check-circle"></i></span></td>
+												<!-- <td ><span class="success tooltips" tooltip="Primary action" tooltip-position="right" tooltip-type="primary" ><i  class="fa fa-check-circle"></i></span></td> -->
+											</tr>
+											<tr >
+												<td >4.</td>
+												<td >The Laundry Shop</td>
+												<td >50 Jaket</td>
+												<td ><img src="assets/image/brand/partner/pembayaran/paypal-1.png" height="30"></td>
+												<td><span class="tooltips warning pending-item" tooltip="Laundry Anda Sedang Diproses" tooltip-position="top" tooltip-type="warning"><i class="fa fa-exclamation-circle"></i></span></td>
+												<!-- <td ><span class="success tooltips" tooltip="Primary action" tooltip-position="right" tooltip-type="primary" ><i  class="fa fa-check-circle"></i></span></td> -->
+											</tr>
+										</tbody>
+									</table>
+								</div>
+									
+							<!-- </div> -->
+						</div>
+					</div> <!-- END tabs-content -->
+				</div> <!-- END tabs -->
+				<!--  -->
+			</div>
+	
+		</div>
+	</div>
+
+
+<!-- Footer -->
+<div id="footer" class="">
+		<div class="container">
+		  <div class="bg-blue">
+			<img src="assets/image/gambar_hp.png" alt="" class="phone">
+			<div class="caption">
+			  <b>#LAUNDRYONLINE</b>
+			  <div class="download">
+				<span>Download AlON sekarang</span>
+				<a href="https://play.google.com/" target="_blank"><img src="assets/image/download_play.png" alt=""></a>
+				<a href="https://apps.apple.com/" target="_blank"><img src="assets/image/download_app.png" alt=""></a>
+			  </div>
+			</div>
+			<div class="clearfix"></div>
+		  </div>
+		  <!-- <div class="clearfix"></div> -->
+		  <div class="foote_2">
+			<!-- <a href="#" class="logo"><img src="../assets/image/logo.png" alt=""></a> -->
+			<div id="link">
+				<a href="index.html">Beranda</a>
+				<a href="toko.html">Produk &amp; Fitur</a>
+				<a href="package.html">Daftar Vendor</a>
+				<a href="index.html#promo">Promo</a>
+				<a href="faq.html">FAQ</a>
+			</div>
+			<div class="copy">
+			  © 2019 ALON - PT. ALON Indonesia. All Rights Reserved.
+			</div>
+	  
+			<div class="sosmed">
+			  <span>Ikuti Kami</span>
+			  <a href="https://twitter.com" target="_blank"><img src="assets/image/ico-tw.png" alt=""></a>
+			  <a href="https://www.facebook.com/" target="_blank"><img src="assets/image/ico-fb.png" alt=""></a>
+			  <a href="https://www.instagram.com/" target="_blank"><img src="assets/image/ico-ig.png" alt=""></a>
+			  <a href="https://www.youtube.com/" target="_blank"><img src="assets/image/ico-yt.png" alt=""></a>
+			</div>
+		  </div>
+	  
+		  </div>
+	  </div>
+<!-- End Footer -->
+
+<!-- Back To Top -->
+<a id="back-to-top" href="#" class="btns btn-primary back-to-top" role="button"><i class="fa fa-chevron-up"></i></a>
+<!-- End Back To Top -->
+</body>
+</html>

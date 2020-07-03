@@ -1,0 +1,38 @@
+@media screen and (max-width: 35.5em) {
+  .history-table table {
+    display: block; }
+    .history-table table > *, .history-table table tr, .history-table table td, .history-table table th {
+      display: block; }
+    .history-table table thead {
+      display: none; }
+    .history-table table tbody tr {
+      height: auto;
+      padding: 4px 0;
+      width: 100%;
+      border: 1px solid #d4d4d4;
+      margin-top: 15px; }
+      .history-table table tbody tr td {
+        padding-left: 45%;
+        margin-bottom: 12px; }
+        .history-table table tbody tr td:last-child {
+          margin-bottom: 0; }
+        .history-table table tbody tr td:before {
+          position: absolute;
+          font-weight: 700;
+          width: 40%;
+          left: 10px;
+          top: 0; } }
+.profile-table > table td {
+  padding: 7px 5px !important; }
+
+.td-w25 {
+  width: 25%; }
+
+.td-w10 {
+  width: 10%; }
+
+.td-w65 {
+  width: 65%;
+  color: #111111; }
+
+/*# sourceMappingURL=responsive-table.css.map */

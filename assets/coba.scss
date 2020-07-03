@@ -1,0 +1,48 @@
+// sets
+
+$gl-ms         : "screen and (max-width: 23.5em)"; // up to 360px
+$gl-xs         : "screen and (max-width: 35.5em)"; // up to 568px
+$gl-sm         : "screen and (max-width: 48em)";   // max 768px
+$gl-md         : "screen and (max-width: 64em)";   // max 1024px
+$gl-lg         : "screen and (max-width: 80em)";   // max 1280px
+
+@media #{$gl-xs}              {
+  
+  .history-table table					              { display:block;
+	  > *,tr,td,th              { display:block }
+    
+    thead                     { display:none }
+    tbody tr                  { height: auto;padding: 4px 0;width: 100%;border: 1px solid #d4d4d4;   margin-top: 15px;
+      td                      { padding-left:45%; margin-bottom:12px;
+        &:last-child          { margin-bottom:0 }
+        &:before              { 
+          position:absolute;
+          font-weight:700;
+          width:40%;
+          left:10px;
+          top:0
+        }
+        
+        // &:nth-child(1):before { content:"No";}
+        // &:nth-child(2):before { content:"Nama Pemesan";}
+        // &:nth-child(3):before { content:"Sejumlah";}
+        // &:nth-child(4):before { content:"Transaksi";}
+      }        
+    }
+  }
+}  
+
+.profile-table > table td {
+  padding: 7px 5px !important;
+}
+
+.td-w25 {
+  width: 25%;
+}
+.td-w10 {
+  width: 10%;
+}
+.td-w65 {
+  width: 65%;
+  color: #111111;
+}
